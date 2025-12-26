@@ -1,0 +1,100 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ÊĞÈÍÆ-ÔÎÍ ÄËß ÂÑÅÉ ÈÃĞÛ */
+html, body, #__next {
+  @apply min-h-screen bg-black text-white;
+  background: radial-gradient(circle at 50% 0%, #1a0033 0%, #000000 50%, #1a0033 100%);
+}
+
+/* ÀÍÈÌÀÖÈß ÁËÅÑÊÀ ÄËß ÊÀĞÒ */
+@keyframes shine {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+.animate-shine {
+  animation: shine 3s infinite;
+}
+
+/* ÏÓËÜÑÀÖÈß ÄËß ÊĞÈÒÈ×ÅÑÊÎÃÎ ÊĞÈÍÆÀ */
+@keyframes pulse-kri {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-kri {
+  animation: pulse-kri 1s infinite;
+}
+
+/* ÒÀÁËÈ×ÊÀ "ÄÅÄ ÈÍÑÀÉÄ" */
+.ded-inside-text {
+  font-family: 'Courier New', monospace;
+  font-weight: 900;
+  font-size: 7rem;
+  background: linear-gradient(90deg, #ff0066, #ff00ff, #6600ff, #0066ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(255, 0, 255, 0.8);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 40px rgba(255, 0, 255, 0.8); }
+  to { text-shadow: 0 0 80px rgba(255, 0, 255, 1); }
+}
+
+/* ÑÊĞÎËËÁÀĞ Â ÊĞÈÍÆÅ */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black border-2 border-purple-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-krinzh-500 to-purple-800 border-2 border-krinzh-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-krinzh-400;
+}
+
+/* ÂÛÁÎĞ ÒÅÊÑÒÀ — ÊĞÈÍÆÎÂÛÉ */
+::selection {
+  background: #ec4899;
+  color: black;
+}
+
+/* ÔÎÊÓÑ ÄËß ÈÍÏÓÒÎÂ */
+input:focus, button:focus-visible {
+  @apply outline-none ring-4 ring-krinzh-500 ring-opacity-70;
+}
+
+/* ÊÍÎÏÊÈ ÍÀ ÑÒÅĞÎÈÄÀÕ */
+.btn-krinzh {
+  @apply relative overflow-hidden font-black text-2xl px-12 py-6 rounded-full
+         bg-gradient-to-r from-krinzh-600 via-purple-600 to-pink-600
+         border-4 border-yellow-500 shadow-2xl
+         hover:scale-110 hover:rotate-3 transition-all duration-300
+         before:absolute before:inset-0 before:bg-white/20 before:transform before:-skew-x-12 before:-translate-x-full before:animate-shine;
+}
+
+/* ÏĞÅËÎÀÄÅĞ ÊĞÈÍÆÀ */
+.loader {
+  width: 120px;
+  height: 120px;
+  border: 16px solid #1a0033;
+  border-top: 16px solid #ec4899;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

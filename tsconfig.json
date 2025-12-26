@@ -22,7 +22,9 @@
       "@/*": ["./src/*"]
     },
     "baseUrl": ".",
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "next-env.d.ts",

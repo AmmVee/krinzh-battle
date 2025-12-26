@@ -96,7 +96,7 @@ export const useGameStore = create<GameState & {
       me: {
         ...get().me,
         userId: myId,
-        username: 'Ð¢Ð«',
+        username: 'ÒÛ',
         deck: myDeck,
         hand: myDeck.splice(0, 5),
       },
@@ -109,7 +109,7 @@ export const useGameStore = create<GameState & {
       },
     })
 
-    // ÐÐ²Ñ‚Ð¾-Ð´Ð¾Ð±Ð¾Ñ€ Ð¿ÐµÑ€Ð²Ð¾Ð¹ ÐºÐ°Ñ€Ñ‚Ñ‹
+    // Àâòî-äîáîð ïåðâîé êàðòû
     setTimeout(() => get().drawCard(), 1000)
   },
 
@@ -123,7 +123,7 @@ export const useGameStore = create<GameState & {
       draft.me.hand.push(card)
     }))
 
-    // ÐÐ²Ñ‚Ð¾-Ñ€Ð°Ð·Ñ‹Ð³Ñ€Ñ‹Ð²Ð°Ð½Ð¸Ðµ "Ð’Ñ‹Ð»Ð¾Ð¼Ð°Ñ‚ÑŒ Ð´Ð²ÐµÑ€ÑŒ"
+    // Àâòî-ðàçûãðûâàíèå "Âûëîìàòü äâåðü"
     if (card.id === 8) {
       setTimeout(() => get().playCard(card), 500)
     }

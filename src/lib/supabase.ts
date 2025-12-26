@@ -5,10 +5,10 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
 if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Отсутствуют переменные окружения Supabase! Проверь .env.local')
+  throw new Error('РћС‚СЃСѓС‚СЃС‚РІСѓСЋС‚ РїРµСЂРµРјРµРЅРЅС‹Рµ РѕРєСЂСѓР¶РµРЅРёСЏ Supabase! РџСЂРѕРІРµСЂСЊ .env.local')
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-// Для дебага (можно удалить потом)
-console.log('Supabase подключён к:', supabaseUrl)
+// Р”Р»СЏ РґРµР±Р°РіР° (РјРѕР¶РЅРѕ СѓРґР°Р»РёС‚СЊ РїРѕС‚РѕРј)
+console.log('Supabase РїРѕРґРєР»СЋС‡С‘РЅ Рє:', supabaseUrl)
